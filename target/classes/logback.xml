@@ -46,9 +46,9 @@
 
     <logger name="ch.qos.logback" level="WARN"/>
 
-    <logger name="tech.iooo.coco" level="debug"/>
+    <logger name="tech.iooo.coco" level="#logback.level#"/>
 
-    <root level="debug">
+    <root level="#logback.level#">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="ASYNC"/>
     </root>
