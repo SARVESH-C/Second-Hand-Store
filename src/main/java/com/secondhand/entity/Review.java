@@ -7,26 +7,19 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "carts")
+@Table(name="reviews")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Cart {
+public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "product_id",nullable = false)
+    @JoinColumn(name="product_id",nullable = false)
     private Product product;
-
-    @Column(nullable = false)
-    private Integer quantity = 1;
 
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime createdAt;
