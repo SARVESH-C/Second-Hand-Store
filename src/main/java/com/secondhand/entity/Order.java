@@ -35,8 +35,8 @@ public class Order {
 
     private String shippingPhone;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<Order> items;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderItem> items;
 
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime createdAt;

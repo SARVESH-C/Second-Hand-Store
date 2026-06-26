@@ -36,6 +36,9 @@ public class Product {
  private String imageUrl;
  private Integer quantity = 1;
 
+   @Column(nullable = false)
+    private String status = "ACTIVE";  
+
  @ManyToOne
  @JoinColumn(name = "seller_id", nullable =  false)
  private User seller;

@@ -14,7 +14,7 @@ import java.util.Map;
 @RequestMapping("/api/orders")
 @CrossOrigin(origins = "http://localhost:3000")
 public class OrderController {
-    @Autowireds
+    @Autowired
     private OrderService orderService;
 
     @Autowired
