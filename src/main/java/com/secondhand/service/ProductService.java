@@ -60,7 +60,7 @@ public class ProductService {
         product.setDescription(updatedProduct.getDescription());
         product.setPrice(updatedProduct.getPrice());
         product.setCategory(updatedProduct.getCategory());
-        product.setCondition(updatedProduct.getCondition());
+        product.setConditions(updatedProduct.getConditions());
         return productRepository.save(product);
     }
 

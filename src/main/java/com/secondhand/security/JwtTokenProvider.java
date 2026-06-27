@@ -12,7 +12,7 @@ public class JwtTokenProvider {
     @Value("${jwt.secret}")
     private String jwtSecret;
 
-    @Value("${jwt.ecpiration")
+    @Value("${jwt.expiration}")
     private long jwtExpirationMs;
 
     public String generateToken(Long userId) {
